@@ -17,10 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private int name_size;
-    private int password_size;
     private EditText ed_Name;
-    private EditText ed_Email;
     private EditText ed_Password;
     private ImageView result1;
     private ImageView result2;
@@ -33,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ed_Name = findViewById(R.id.name);
-        ed_Email = findViewById(R.id.email);
         ed_Password = findViewById(R.id.password);
         result1 = findViewById(R.id.result1);
         result2 = findViewById(R.id.result2);
@@ -48,10 +44,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void enter(View view){
-        String name = ed_Name.getText().toString();
-        String password = ed_Password.getText().toString();
-        int name_size = name.length();
-        int password_size = password.length();
+        int name_size = ed_Name.length();
+        int password_size = ed_Password.length();
         result1.setAlpha(1.0f);
         result2.setAlpha(1.0f);
         result1.setVisibility(View.VISIBLE);
